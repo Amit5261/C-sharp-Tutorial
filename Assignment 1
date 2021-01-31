@@ -17,16 +17,20 @@ namespace copyfile
         {
 
             bool copied = CopyFile("Cat.txt", "Dog.txt", true);
-
-            	if (copied)          // check for status of copying.
+	    
+	   // check for status of copying.
+	   
+            	if (copied)         
 
                 	Console.WriteLine("Files copied successfully");
-
-	          	else
+			
+	  // Try Again
+	  
+	          else               
               
                 	Console.WriteLine("Try Again!!!");
 
-            	Console.ReadKey();
+            		Console.ReadKey();
         }
     }
 }
