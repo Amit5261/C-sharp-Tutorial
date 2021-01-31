@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace copyfile
+{
+    class Copy
+    {
+        [DllImport("Kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern bool CopyFile(String ipFile, String destFile, bool FailIfExists);
+
+        static void Main()
+
+        {
+
+            bool copied = CopyFile("Cat.txt", "Dog.txt", true);
+
+            	if (copied)          // check for status of copying.
+
+                	Console.WriteLine("Files copied successfully");
+
+	          	else
+              
+                	Console.WriteLine("Try Again!!!");
+
+            	Console.ReadKey();
+        }
+    }
+}
